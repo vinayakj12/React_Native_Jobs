@@ -13,17 +13,18 @@ export default function Home() {
   return (
       <SafeAreaView style={{flex: 1, backgroundColor: COLORS.lightWhite}}>
        
-       {/* Stack screen 1 HEADER COMPONENT  */}
+       {/* Stack screen 1 HEADER COMPONENT: Navigation bar  */}
        <Stack.Screen options={{
-        headerStyle: {background: COLORS.lightWhite},
+        headerStyle: {backgroundColor: COLORS.lightWhite},
         headerShadowVisible: false,
-        headerLeft: () => {
-          <ScreenHeaderBtn iconUrl ={ icons.menu} dimensions="60%" />
-        },
+        
+        headerLeft: () => (
+          <ScreenHeaderBtn iconUrl ={ icons.menu} dimension="60%" />
+        ),
 
-        headerRigt: () => {
-          <ScreenHeaderBtn iconUrl ={ icons.profile} dimensions="100%" />
-        },
+        headerRight: () => (
+          <ScreenHeaderBtn iconUrl ={ images.profile} dimension="100%" />
+        ),
       
         headerTitle: ""
        }}/>
